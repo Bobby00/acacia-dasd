@@ -1,0 +1,492 @@
+{% load static %}
+  <!-- MOBILE MENU WRAP -->
+  <div class="mobile-menu-wrap">
+
+
+    <!-- CROSS ICON -->
+    <svg class="cross-icon big mobile-menu-close">
+      <use xlink:href="#svg-cross-big"></use>
+    </svg>
+    <!-- /CROSS ICON -->
+
+    <!-- SEARCH POPUP OPEN -->
+    <svg class="search-popup-open search-icon">
+      <use xlink:href="#svg-search"></use>
+    </svg>
+    <!-- /SEARCH POPUP OPEN -->
+
+    <!-- LOGO IMG -->
+    <figure class="logo-img">
+      <a href="{% url 'home' %}">
+        <img src="{% static 'img/acaciax/logo/full-logo.png' %}" alt="Logo">
+      </a>
+    </figure>
+    <!-- /LOGO IMG -->
+
+    <!-- MOBILE MENU -->
+    <ul class="mobile-menu">
+      <!-- MOBILE MENU ITEM -->
+      <li class="mobile-menu-item">
+        <a href="index.html" class="mobile-menu-item-link accent-color">Home</a>
+      </li>
+      <!-- /MOBILE MENU ITEM -->
+
+      <!-- MOBILE MENU ITEM -->
+      <li class="mobile-menu-item">
+        <p class="mobile-menu-item-link pd-dropdown-handler accent-color">Trading Tools</p>
+        <!-- ARROW ICON -->
+        <svg class="arrow-icon medium">
+          <use xlink:href="#svg-arrow-medium"></use>
+        </svg>
+        <!-- /ARROW ICON -->
+
+        <!-- MOBILE DROPDOWN -->
+        <ul class="mobile-dropdown pd-dropdown">
+          <!-- MOBILE DROPDOWN ITEM -->
+          <li class="mobile-dropdown-item">
+            <p class="mobile-dropdown-item-link pd-dropdown-handler">Charts</p>
+            <!-- ARROW ICON -->
+            <svg class="arrow-icon medium">
+              <use xlink:href="#svg-arrow-medium"></use>
+            </svg>
+            <!-- /ARROW ICON -->
+
+            <!-- MOBILE DROPDOWN -->
+            <ul class="mobile-dropdown pd-dropdown">
+              <!-- MOBILE DROPDOWN ITEM -->
+              <li class="mobile-dropdown-item">
+                <a href="esports-home.html" class="mobile-dropdown-item-link">Advanced real-time</a>
+              </li>
+              <!-- /MOBILE DROPDOWN ITEM -->
+
+              <!-- MOBILE DROPDOWN ITEM -->
+              <li class="mobile-dropdown-item">
+                <a href="esports-news.html" class="mobile-dropdown-item-link">Market screener</a>
+              </li>
+              <!-- /MOBILE DROPDOWN ITEM -->
+
+            </ul>
+            <!-- /MOBILE DROPDOWN -->
+          </li>
+          <!-- /MOBILE DROPDOWN ITEM -->
+
+          <!-- MOBILE DROPDOWN ITEM -->
+          <li class="mobile-dropdown-item">
+            <p class="mobile-dropdown-item-link pd-dropdown-handler">Calendars</p>
+            <!-- ARROW ICON -->
+            <svg class="arrow-icon medium">
+              <use xlink:href="#svg-arrow-medium"></use>
+            </svg>
+            <!-- /ARROW ICON -->
+
+            <!-- MOBILE DROPDOWN -->
+            <ul class="mobile-dropdown pd-dropdown">
+              <!-- MOBILE DROPDOWN ITEM -->
+              <li class="mobile-dropdown-item">
+                <a href="esports-match-overview-v1.html" class="mobile-dropdown-item-link">Economic calendar</a>
+              </li>
+              <!-- /MOBILE DROPDOWN ITEM -->
+
+            </ul>
+            <!-- /MOBILE DROPDOWN -->
+          </li>
+          <!-- /MOBILE DROPDOWN ITEM -->
+
+          <!-- MOBILE DROPDOWN ITEM -->
+          <li class="mobile-dropdown-item">
+            <p class="mobile-dropdown-item-link pd-dropdown-handler">Calculators</p>
+            <!-- ARROW ICON -->
+            <svg class="arrow-icon medium">
+              <use xlink:href="#svg-arrow-medium"></use>
+            </svg>
+            <!-- /ARROW ICON -->
+
+            <!-- MOBILE DROPDOWN -->
+            <ul class="mobile-dropdown pd-dropdown">
+              <!-- MOBILE DROPDOWN ITEM -->
+              <li class="mobile-dropdown-item">
+                <a href="esports-team.html" class="mobile-dropdown-item-link">Pip calculator</a>
+              </li>
+              <!-- /MOBILE DROPDOWN ITEM -->
+
+              <!-- MOBILE DROPDOWN ITEM -->
+              <li class="mobile-dropdown-item">
+                <a href="esports-player.html" class="mobile-dropdown-item-link">Profit calculator</a>
+              </li>
+              <!-- /MOBILE DROPDOWN ITEM -->
+
+            </ul>
+            <!-- /MOBILE DROPDOWN -->
+          </li>
+          <!-- /MOBILE DROPDOWN ITEM -->
+
+        </ul>
+        <!-- /MOBILE DROPDOWN -->
+      </li>
+      <!-- /MOBILE MENU ITEM -->
+
+      <!-- MOBILE MENU ITEM -->
+      <li class="mobile-menu-item">
+        <a href="forum.html" class="mobile-menu-item-link accent-color">Forum</a>
+      </li>
+      <!-- /MOBILE MENU ITEM -->
+  
+    </ul>
+    <!-- /MOBILE MENU -->
+  </div>
+  <!-- /MOBILE MENU WRAP -->
+
+  <!-- HEADER WRAP -->
+  <div class="header-wrap">
+    <!-- HEADER -->
+    <div class="header grid-limit">
+      <!-- WIDGET SELECTABLES -->
+      <div class="widget-selectables float_right">
+
+        {% if user.is_authenticated %}
+
+
+                  <!-- WIDGET OPTIONS WRAP -->
+        <div class="widget-options-wrap">
+          <!-- CURRENT OPTION -->
+          <div id="account-dropdown-trigger" class="current-option">
+            <!-- CURRENT OPTION VALUE -->
+            <div class="current-option-value">
+              <img class="widget-option-img user-avatar micro" src="{% static 'img/users/05.jpg' %}" alt="avatar-01">
+              <p class="widget-option-text">{{ user.username }}</p>
+            </div>
+            <!-- /CURRENT OPTION VALUE -->
+
+            <!-- ARROW ICON -->
+            <svg class="arrow-icon">
+              <use xlink:href="#svg-arrow"></use>
+            </svg>
+            <!-- /ARROW ICON -->
+          </div>
+          <!-- /CURRENT OPTION -->
+
+          <!-- WIDGET OPTIONS -->
+          <div id="account-dropdown" class="widget-options short linkable">
+            <!-- WIDGET OPTION HEADING -->
+            <div class="widget-option-heading blue">
+              <p class="widget-option-text">Main Account</p>
+            </div>
+            <!-- /WIDGET OPTION HEADING -->
+
+            <!-- WIDGET OPTION -->
+            <a href="account-settings.html" class="widget-option">
+              <p class="widget-option-text">Account Settings</p>
+            </a>
+            <!-- /WIDGET OPTION -->
+
+
+            <!-- WIDGET OPTION HEADING -->
+            <div class="widget-option-heading red">
+              <p class="widget-option-text">Acaciax Forums</p>
+            </div>
+            <!-- /WIDGET OPTION HEADING -->
+
+            <!-- WIDGET OPTION -->
+            <a href="profile-summary.html" class="widget-option">
+              <p class="widget-option-text">Summary</p>
+            </a>
+            <!-- /WIDGET OPTION -->
+
+            <!-- WIDGET OPTION -->
+            <a href="profile-activity.html" class="widget-option">
+              <p class="widget-option-text">Activity</p>
+            </a>
+            <!-- /WIDGET OPTION -->
+
+            <!-- WIDGET OPTION -->
+            <a href="profile-notifications.html" class="widget-option">
+              <p class="widget-option-text">Notifications</p>
+            </a>
+            <!-- /WIDGET OPTION -->
+
+            <!-- WIDGET OPTION -->
+            <a href="profile-messages.html" class="widget-option">
+              <p class="widget-option-text">Messages</p>
+            </a>
+            <!-- /WIDGET OPTION -->
+
+            <!-- WIDGET OPTION -->
+            <a href="profile-badges.html" class="widget-option">
+              <p class="widget-option-text">Profile Badges</p>
+            </a>
+            <!-- /WIDGET OPTION -->
+
+            <!-- WIDGET OPTION -->
+            <a href="profile-settings.html" class="widget-option">
+              <p class="widget-option-text">Settings</p>
+            </a>
+            <!-- /WIDGET OPTION -->
+          </div>
+          <!-- /WIDGET OPTIONS -->
+        </div>
+        <!-- /WIDGET OPTIONS WRAP -->
+
+        <!-- BUTTON -->
+        <a href="{% url 'logout' %}" class="button tiny hidden-xs logout-btn log-button">
+            Logout
+            <!-- BUTTON ORNAMENT -->
+            <div class="button-ornament cstm-btn-ornament">
+              <!-- ARROW ICON -->
+              <svg class="arrow-icon">
+                <use xlink:href="#svg-arrow"></use>
+              </svg>
+              <!-- /ARROW ICON -->
+            </div>
+            <!-- /BUTTON ORNAMENT -->
+          </a>
+          <!-- /BUTTON -->
+
+        {% else %}
+          
+          <!-- BUTTON -->
+          <a href="{% url 'login' %}" class="button tiny hidden-xs logout-btn log-button">
+              Sign in
+              <!-- BUTTON ORNAMENT -->
+              <div class="button-ornament cstm-btn-ornament">
+                <!-- ARROW ICON -->
+                <svg class="arrow-icon">
+                  <use xlink:href="#svg-arrow"></use>
+                </svg>
+                <!-- /ARROW ICON -->
+              </div>
+              <!-- /BUTTON ORNAMENT -->
+            </a>
+            <!-- /BUTTON -->
+          <span class="accounts-or-styl"> or </span>
+            <!-- BUTTON -->
+          <a href="{% url 'signup' %}" class="button tiny hidden-xs logout-btn log-button">
+              Create account
+              <!-- BUTTON ORNAMENT -->
+              <div class="button-ornament cstm-btn-ornament">
+                <!-- ARROW ICON -->
+                <svg class="arrow-icon">
+                  <use xlink:href="#svg-arrow"></use>
+                </svg>
+                <!-- /ARROW ICON -->
+              </div>
+              <!-- /BUTTON ORNAMENT -->
+            </a>
+            <!-- /BUTTON -->
+
+        {% endif %}
+
+      </div>
+      <!-- /WIDGET SELECTABLES -->
+    </div>
+    <!-- /HEADER -->
+  </div>
+  <!-- /HEADER WRAP -->
+
+
+  <!-- LIVE NEWS WIDGET WRAP -->
+  <div class="live-news-widget-wrap stick-top">
+    <!-- TradingView Widget BEGIN -->
+        <div class="tradingview-widget-container">
+          <script type="text/javascript" src="https://s3.tradingview.com/external-embedding/embed-widget-ticker-tape.js" async>
+          {
+          "symbols": [
+            {
+              "proName": "OANDA:SPX500USD",
+              "title": "S&P 500"
+            },
+            {
+              "proName": "OANDA:NAS100USD",
+              "title": "Nasdaq 100"
+            },
+            {
+              "proName": "FX_IDC:EURUSD",
+              "title": "EUR/USD"
+            },
+            {
+              "proName": "BITSTAMP:BTCUSD",
+              "title": "BTC/USD"
+            },
+            {
+              "proName": "BITSTAMP:ETHUSD",
+              "title": "ETH/USD"
+            }
+          ],
+          "colorTheme": "dark",
+          "isTransparent": false,
+          "displayMode": "adaptive",
+          "locale": "en"
+        }
+          </script>
+        </div>
+        <!-- TradingView Widget END -->
+  </div>
+  <!-- /LIVE NEWS WIDGET WRAP -->
+
+  <!-- NAVIGATION WRAP -->
+  <nav class="navigation-wrap void">
+    <!-- NAVIGATION -->
+    <div class="navigation grid-limit">
+      <!-- LOGO -->
+      <div class="logo">
+        <!-- LOGO IMG -->
+        <a href="{% url 'home' %}">
+          <figure class="logo-img">
+              <img src="{% static 'img/acaciax/logo/full-logo.png' %}" alt="Logo">
+          </figure>
+        </a>
+        <!-- /LOGO IMG -->
+      </div>
+      <!-- /LOGO -->
+
+      <!-- INVENTORY BUTTON -->
+      <div class="inventory-button hidden-md">
+        <!-- MOBILE MENU PULL -->
+          <div class="mobile-menu-pull mobile-menu-open">
+            <!-- MENU PULL ICON -->
+            <svg class="menu-pull-icon">
+              <use xlink:href="#svg-menu-pull"></use>
+            </svg>
+            <!-- /MENU PULL ICON -->
+          </div>
+          <!-- /MOBILE MENU PULL -->
+      </div>
+      <!-- /INVENTORY BUTTON -->
+
+      <!-- SEARCH BUTTON -->
+      <div class="search-button search-popup-open">
+        <!-- SEARCH ICON -->
+        <svg class="search-icon">
+          <use xlink:href="#svg-search"></use>
+        </svg>
+        <!-- /SEARCH ICON -->
+      </div>
+      <!-- /SEARCH BUTTON -->
+
+      <!-- MAIN MENU --><title>{% block title %}Django Boards{% endblock %}</title>
+      <ul class="main-menu">
+        <!-- MAIN MENU ITEM -->
+        <li class="main-menu-item">
+          <a href="{% url 'home' %}" class="main-menu-item-link accent-color">Home</a>
+        </li>
+        <!-- /MAIN MENU ITEM -->
+
+        <!-- MAIN MENU ITEM -->
+        <li class="main-menu-item">
+          <a href="#" class="main-menu-item-link accent-color">
+            Trading tools
+            <!-- SVG ARROW -->
+            <svg class="arrow-icon">
+              <use xlink:href="#svg-arrow"></use>
+            </svg>
+            <!-- /SVG ARROW -->
+          </a>
+
+          <!-- SUBMENU -->
+          <ul class="submenu void">
+            <!-- SUBMENU ITEM -->
+            <li class="submenu-item padded">
+              <!-- LINK SECTIONS -->
+              <div class="link-sections">
+                <!-- LINK SECTION -->
+                <div class="link-section">
+                  <!-- SECTION TITLE WRAP -->
+                  <div class="section-title-wrap blue">
+                    <h2 class="section-title small">Charts</h2>
+                    <div class="section-title-separator"></div>
+                  </div>
+                  <!-- /SECTION TITLE WRAP -->
+
+                  <!-- LINK LIST -->
+                  <ul class="link-list">
+                    <!-- LINK LIST ITEM -->
+                    <li class="link-list-item">
+                      <a href="real-time-widget.html">Advanced real-time chart</a>
+                    </li>
+                    <!-- /LINK LIST ITEM -->
+
+                    <!-- LINK LIST ITEM -->
+                    <li class="link-list-item">
+                      <a href="market-screener.html">Market Screener</a>
+                    </li>
+                    <!-- /LINK LIST ITEM -->
+
+                  </ul>
+                  <!-- /LINK LIST -->
+
+                </div>
+                <!-- /LINK SECTION -->
+
+                <!-- LINK SECTION -->
+                <div class="link-section">
+                  <!-- SECTION TITLE WRAP -->
+                  <div class="section-title-wrap blue">
+                    <h2 class="section-title small">Calendars</h2>
+                    <div class="section-title-separator"></div>
+                  </div>
+                  <!-- /SECTION TITLE WRAP -->
+
+                  <!-- LINK LIST -->
+                  <ul class="link-list">
+                    <!-- LINK LIST ITEM -->
+                    <li class="link-list-item">
+                      <a href="economic-calendar.html">Economic calendar</a>
+                    </li>
+                    <!-- /LINK LIST ITEM -->
+
+                  </ul>
+                  <!-- /LINK LIST -->
+                </div>
+                <!-- /LINK SECTION -->
+
+                <!-- LINK SECTION -->
+                <div class="link-section">
+                  <!-- SECTION TITLE WRAP -->
+                  <div class="section-title-wrap red">
+                    <h2 class="section-title small">Calculators</h2>
+                    <div class="section-title-separator"></div>
+                  </div>
+                  <!-- /SECTION TITLE WRAP -->
+
+                  <!-- LINK LIST -->
+                  <ul class="link-list">
+                    <!-- LINK LIST ITEM -->
+                    <li class="link-list-item">
+                      <a href="forum.html">Pip calculator</a>
+                    </li>
+                    <!-- /LINK LIST ITEM -->
+
+                    <!-- LINK LIST ITEM -->
+                    <li class="link-list-item">
+                      <a href="forum-categories.html">Profit calculator</a>
+                    </li>
+                    <!-- /LINK LIST ITEM -->
+                  </ul>
+                  <!-- /LINK LIST -->
+
+                </div>
+                <!-- /LINK SECTION -->
+              </div>
+              <!-- /LINK SECTIONS -->
+
+              <!-- LINE SEPARATOR -->
+              <div class="line-separator"></div>
+
+            </li>
+            <!-- /SUBMENU ITEM -->
+          </ul>
+          <!-- /SUBMENU -->
+        </li>
+        <!-- /MAIN MENU ITEM -->
+
+        <!-- MAIN MENU ITEM -->
+        <li class="main-menu-item">
+          <a href="{% url 'forum' %}" class="main-menu-item-link accent-color">Forum</a>
+        </li>
+        <!-- /MAIN MENU ITEM -->
+
+      </ul>
+      <!-- /MAIN MENU -->
+    </div>
+    <!-- NAVIGATION -->
+  </nav>
+  <!-- /NAVIGATION WRAP -->

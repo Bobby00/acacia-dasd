@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Forum Categories</title>
+  </head>
+  <body>
+    <h1>Categories</h1>
+
+    {% for category in categories %}
+      {{ category.name }} <br>
+    {% endfor %}
+
+  </body>
+</html>

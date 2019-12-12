@@ -1,0 +1,601 @@
+.header {
+	display: inherit;
+}
+.float_right {
+	float: right;
+}
+.text_left {
+	text-align: left;
+}
+.banner-slider .slider-item-wrap {
+	width: 60%;
+}
+.logout-btn {
+	border:1px solid #fff;
+}
+.cstm-btn-ornament {
+	background-color: transparent!important;
+	border: 1px solid #fff;
+	top: 2px!important;
+}
+.cstm-btn-ornament .arrow-icon {
+	top: 6px!important;
+	left: 8px!important;
+	width: 5px;
+	height: 7px;
+}
+
+.button.full {
+	font-size: 16px;
+	margin-top: 20px;
+}
+
+.alert-success {
+	background-color: #9cda9c;
+	padding: 10px;
+	border-radius: 10px;
+}
+
+.alert-danger {
+	background-color: #ff000040;
+	padding: 10px;
+	border-radius: 10px;
+}
+.danger-txt-styl {
+	color: black;
+	font-weight: 500;
+}
+
+.invalid-feedback {
+	font-size: 14px;
+	color: red;
+	padding-bottom: 10px;
+}
+
+.text-muted {
+	font-style:	italic;
+	color: gray;
+}
+
+.is-invalid {
+	border: 2px solid red!important;
+}
+
+.is-valid {
+	border: 2px solid green!important;
+}
+
+
+.post-preview-title {
+	text-transform: unset!important;
+}
+.text-left {
+	text-align: left!important;
+}
+.cstm-width-40 {
+	width: 40%;
+}
+.cstm-width-45 {
+	width: 45%;
+}
+.cstm-width-50 {
+	width: 50%;
+}
+.cstm-width-60 {
+	width: 60%;
+}
+.cstm-width-70 {
+	width: 70%;
+}
+.cstm-width-80 {
+	width: 80%;
+}
+.forum-category-wrap {
+	padding: 20px 0px!important;
+}
+.posts_header_text {
+	padding: 10px 40px;
+	border-left: 8px solid;
+	margin: 40px 0px;
+}
+.cstm-no-grid {
+	display: unset;
+}
+.icon-cstm-width {
+	width: 12%;
+	padding-right: 20px;
+}
+.cstm-scroller-pos {
+	left: 820px!important;
+}
+.forum-user-list {
+	float: right;
+}
+.btn-1-cstm {
+	padding: 15px 30px;
+	background-color: gray;
+	border-radius: 30px;
+	color: white;
+	width: 70%;
+}
+.cstm_svg_btn-1 {
+	fill: #fff;
+	right: 0;
+}
+.fnt-sze-14 {
+	font-size: 14px;
+}
+.section-title-wrap .section-title-separator {
+	height: unset;
+}
+.section-title-wrap .section-title-separator:before {
+	height: 5px;	
+}
+button.light-gray {
+	background-color: #9a9a9a;
+}
+.cstm_fit_content {
+	width: fit-content;
+}
+.mgn_left-40 {
+	margin-left: 30%;
+}
+label {
+	font-size: 15px;
+	font-weight: 700;
+	padding-top: 25px;
+}
+
+.section-title-wrap.light-gray .section-title-separator:before {
+	background-color: #9a9a9a;
+}
+.mgn_top_10pc {
+	margin-top: 10%;
+}
+.mgn_top_15pc {
+	margin-top: 15%;
+}
+.mgn_top_20pc {
+	margin-top: 20%;
+}
+.mgn_top_30pc {
+	margin-top: 30%;
+}
+.cstm-col-1 {
+	grid-template-columns: 700px;
+}
+.forum-category-wrap {
+  width: unset;
+  padding: 40px 0 40px 100px;
+  position: relative;
+}
+
+.table-row-item .table-text {
+	text-align: unset;
+}
+.bread-crumb-home {
+	color: white;
+	font-weight: 800;
+}
+.bread-crumb-home:hover {
+	text-decoration: underline;
+	cursor: pointer;
+	color: white;
+	font-weight: 800;
+}
+
+.sidebar-headers {
+	font-size: 16px;
+	color: #001446;
+	font-weight: 600;
+	padding-bottom: 12px;
+}
+
+.start-trading-btn {
+	padding: 15px 35px;
+	border-radius: 30px;
+	color: white;
+	font-size: 20px;
+	font-weight: 800;
+	background-color: blueviolet;
+}
+
+.start-trading-btn:hover {
+	padding: 15px 35px;
+	border-radius: 30px;
+	color: blueviolet;
+	cursor: pointer;
+	font-size: 20px;
+	font-weight: 800;
+	border: 2px solid blueviolet;
+	background-color: #fff;
+}
+
+.post-preview.landscape.big {
+	height: 320px;
+}
+.promo-banner {
+	margin-bottom: 10%;
+}
+.live-news-widget .live-news-widget-title-wrap {
+	left: -15px;
+}
+
+.pad-tp_btm_post {
+	padding: 30px 0px;
+}
+
+.pad-tp_btm {
+	padding: 15px 0px;
+	font-size: 2.5em!important;
+}
+.cstm-bg-yellow {
+	background-color: orange;
+}
+.no-border {
+	border-bottom: unset!important;
+	border:unset;
+}
+.cstm-width-700 {
+	max-width: 700px;
+}
+.cstm-post-img-width {
+	width: 600px!important;
+}
+.plain-btn-3 {
+	margin: 30px 10px;
+	padding: 10px 30px;
+	border-radius: 40px;
+	background-color: white;
+	border:1px solid black;
+}
+.plain-btn-3:hover {
+	color: white;
+	margin: 30px 10px;
+	padding: 10px 30px;
+	border-radius: 40px;
+	background-color: black;
+	border:1px solid black;
+	cursor: pointer;
+}
+
+.cstm-pd-r-40 {
+	padding-right: 60px;
+}
+.filters-row {
+	border-bottom: unset;
+}
+.dp-option-text {
+	font-size: 14px!important;
+}
+
+.accounts-or-styl {
+	margin-top: 15px;
+	color: #fff;
+	margin-right: 10px;
+	margin-left: 10px;
+}
+
+.pd-lft-10 {
+	padding-left: 10px;
+}
+
+.bder-cstm-clr {
+	border: 2px solid cadetblue!important;
+	font-size: 16px!important;
+}
+
+.table-header-brder-btm {
+	border-bottom: 2px solid gray!important;
+}
+
+.fnt-14 {
+	font-size: 14px!important;
+}
+.fnt-15 {
+	font-size: 15px!important;
+}
+.fnt-16 {
+	font-size: 16px!important;
+}
+.table-row-header-title {
+	font-size: 18px!important;
+}
+
+.table.forum-topics .table-row-item .forum-post-link {
+	width: fit-content;
+}
+
+.capitalize {
+	text-transform: uppercase;
+}
+
+.text-center {
+	text-align: center!important;
+}
+
+.no-brdr-space {
+	border-spacing: 0px!important;
+}
+.cstm-width-a {
+	max-width: 350px; 
+	word-wrap: break-word;
+}
+.pd-btm-12 {
+	padding-bottom: 12px;
+}
+.fnt-w8-400 {
+	font-weight: 400;
+}
+.fnt-w8-600 {
+	font-weight: 600;
+}
+.fnt-w8-700 {
+	font-weight: 700;
+}
+.fnt-w8-800 {
+	font-weight: 800;
+}
+.clr_black p {
+	color: black!important;
+}
+.forum-latest p span {
+	font-weight: 400;
+}
+.hidden-md {
+	display: none;
+}
+
+.forum-table-topics > thead > tr > th, .forum-table-topics > tbody > tr > th, .forum-table-topics > tfoot > tr > th, .forum-table-topics > thead > tr > td, .forum-table-topics > tbody > tr > td, .forum-table-topics > tfoot > tr > td {
+	padding: 1.2rem 1rem;
+}
+.forum-header-title {
+	font-size: 18px;
+}
+
+.header .widget-selectables:last-child .widget-options-wrap {
+	display: unset;
+}
+.header .widget-selectables .widget-option-img {
+	display: unset;
+}
+.menu-pull-icon {
+	fill: black;
+}
+.mobile-menu-pull {
+	background-color: inherit;
+	padding-top: 60%;
+}
+.logo .logo-img {
+	width: 130px
+}
+.submenu.void {
+	width: 50%;
+	margin-left: -30px;
+}
+
+button.accent-color-bg {
+	background-color: #F7A41A;
+}
+
+.section-title-wrap.primary-color .section-title-separator:before {
+	background-color: #001446;
+}
+
+/*colors*/
+.primary-color {
+	color: #001446;
+}
+.base-color {
+	color: #18535B;
+}
+.secondary-color {
+ color: #9B461F!important;
+}
+.alternate-secondary-color {
+	color: #275C7A;
+}
+.accent-color {
+	color: #F7A41A!important;
+}
+.accent-color-bg {
+	background-color: #F7A41A;
+}
+.highlight-color {
+	color: #FFEF38;
+}
+.clr-whte {
+	color: #FFF;
+}
+
+.main-menu .main-menu-item-link {
+	font-size: 1.0125em;
+}
+.link-section .link-list {
+	margin: 0;
+}
+.link-list-item a {
+	font-size: 0.85em;
+	padding-top: 5px;
+}
+.stick-top {
+	position: sticky;
+	z-index: 100;
+	position: -webkit-fixed;
+	top: 0;
+}
+
+.mgn-tp-30 {
+	margin-top: 30px;
+}
+
+.sticky-side-bar {
+	position: sticky;
+	position: -webkit-fixed;
+	top: 15%;
+}
+
+
+.promo-banner {
+	background:unset;
+	background-color: gray;
+	min-height: 150px;
+}
+
+
+
+
+/*PRE LOADER*/
+
+.medica-load {
+    -webkit-animation: 2000ms linear 0s normal none infinite running medica-load;
+    animation: 2000ms linear 0s normal none infinite running medica-load;
+    background: transparent none repeat scroll 0 0;
+    border-color: #ffffff #ffffff #18535B;
+    border-radius: 50%;
+    border-style: solid;
+    border-width: 2px;
+    height: 60px;
+    position: absolute;
+    width: 60px;
+    z-index: 10;
+    top: 50%;
+    left: 50%;
+    margin-top: -30px;
+    margin-left: -30px;
+}
+
+@-webkit-keyframes medica-load {
+    0% {
+        -webkit-transform: rotate(0deg);
+        transform: rotate(0deg);
+    }
+    100% {
+        -webkit-transform: rotate(360deg);
+        transform: rotate(360deg);
+    }
+}
+
+@keyframes medica-load {
+    0% {
+        -webkit-transform: rotate(0deg);
+        transform: rotate(0deg);
+    }
+    100% {
+        -webkit-transform: rotate(360deg);
+        transform: rotate(360deg);
+    }
+}
+
+@-webkit-keyframes medica-thumb {
+    0% {
+        opacity: 0;
+        -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=0)";
+    }
+    50% {
+        opacity: 1;
+        -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=100)";
+    }
+    100% {
+        opacity: 0;
+        -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=0)";
+    }
+}
+
+@keyframes medica-thumb {
+    0% {
+        opacity: 0;
+        -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=0)";
+    }
+    50% {
+        opacity: 1;
+        -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=100)";
+    }
+    100% {
+        opacity: 0;
+        -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=0)";
+    }
+}
+
+
+#preloader {
+    position: fixed;
+    z-index: 9999;
+    width: 100%;
+    height: 100%;
+    background-color: #f2f4f8;
+    top: 0;
+    left: 0;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+}
+
+
+#preloader {
+    overflow: hidden;
+    background-color: #F7A41A;
+    height: 100%;
+    left: 0;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 999999;
+}
+
+#preloader img {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    margin-top: -15px;
+    margin-left: -15px;
+    width: 30px;
+    height: 30px;
+    z-index: 8;
+    -webkit-animation: 2000ms linear 0s normal none infinite running medica-thumb;
+            animation: 2000ms linear 0s normal none infinite running medica-thumb;
+}
+
+
+
+/*PRE-LOADER STYLING*/
+
+
+
+/*START OF RESPONSIVE DESIGN*/
+
+@media only screen and (min-device-width : 320px) and (max-device-width : 768px) {
+	.navigation .logo {
+		
+	}
+	.hidden-md {
+		display: block;
+	}
+	.logo .logo-img {
+		width: 100px;
+	}
+	.banner-slider.v2 .slider-item-wrap {
+		padding: 120px 0 0;
+	}
+	.banner-slider .slider-item-wrap {
+		width: 80%;
+	}
+	.mobile-menu-wrap .logo-img {
+		width: 70px;
+	}
+	.display-flex {
+		display: flex;
+	}
+	.cstm-col-1 {
+		grid-template-columns: unset;
+	}
+	.mgn_left-40 {
+		margin-left: 15%;
+	}
+}

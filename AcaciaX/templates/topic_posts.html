@@ -1,0 +1,372 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block title %}Acaciax | Topic posts{% endblock %}
+
+{% block content_topic_posts %}
+  <!-- BANNER WRAP -->
+  <div class="banner-wrap game-review">
+    <!-- BANNER -->
+    <div class="banner grid-limit cstm-width-50">
+
+      <!-- TAG ORNAMENT -->
+        <a href="news-v2.html" class="tag-ornament cstm-bg-yellow">STOCK MARKETS</a>
+      <!-- /TAG ORNAMENT -->
+
+      <h2 class="banner-title pad-tp_btm text-left">{{ topic.subject }}</h2>
+
+          {% for post in topic.posts.all %}
+          <!-- POST AUTHOR INFO -->
+          <div class="post-author-info-wrap">
+            <!-- USER AVATAR -->
+            <a href="search-results.html">
+              <figure class="user-avatar tiny liquid">
+                <img src="{% static 'img/users/04.jpg' %}" alt="{{ post.created_by.username }}">
+              </figure>
+            </a>
+            <!-- /USER AVATAR -->
+            <p class="post-author-info small light">By <a href="search-results.html" class="post-author">{{ post.created_by.username }}</a><span class="separator">|</span>{{ post.created_at }}<span class="separator">|</span><a href="post-v2.html#op-comments" class="post-comment-count">28 Comments</a></p>
+          {% endfor %}
+          </div>
+          <br>
+          <!-- /POST AUTHOR INFO -->
+          <div class="layout-item-2-1">
+            <div class="layout-item cstm-no-grid">
+              <img class="icon-cstm-width" src="{% static 'img/acaciax/facebook_icon.png' %}">
+              <img class="icon-cstm-width" src="{% static 'img/acaciax/instagram_icon.png' %}">
+              <img class="icon-cstm-width" src="{% static 'img/acaciax/twitter_icon.png' %}">
+            </div>
+
+            <div class="layout-item">
+              
+            </div>
+          </div>
+    </div>
+    <!-- /BANNER -->
+  </div>
+  <!-- /BANNER WRAP -->
+
+
+  <!-- LAYOUT CONTENT 1 -->
+  <div class="layout-content-full grid-limit cstm-width-700">
+    <!-- FAQ ITEMS -->
+    <div class="faq-items">
+      <!-- FAQ ITEM -->
+      <div class="faq-item no-border">
+        <div class="cstm-post-title">
+          <div class="post_section">
+            <div class="posts_header_text">
+              <h1>{{ topic.subject }}</h1>
+            </div>
+
+            {% for post in topic.posts.all %}
+            <!-- FAQ ITEM CONTENT -->
+            <div class="posts_text cstm-width-80">
+              <!-- FAQ ITEM TEXT -->
+              <p>{{ post.message }}</p>
+
+              {% if post.created_by == user %}
+              <div class="mt-3">
+                <a href="#" class="btn btn-primary btn-sm" role="button">Edit</a>
+              </div>
+            {% endif %}
+            </div>
+            <!-- /FAQ ITEM CONTENT -->
+            {% endfor %}
+          </div>
+        </div>
+      </div>
+      <!-- /FAQ ITEM -->
+
+      <!-- FAQ ITEM -->
+      <div class="faq-item">
+
+        <!-- FAQ ITEM CONTENT -->
+        <div class="faq-item-content accordion-open">
+
+          <button class="plain-btn-3">STOCKS</button>
+          <button class="plain-btn-3">MARKETS</button>
+          <button class="plain-btn-3">COMMODITIES</button>
+
+        </div>
+        <!-- /FAQ ITEM CONTENT -->
+      </div>
+      <!-- /FAQ ITEM -->
+      
+      <!-- POST ITEM SHARE-->
+      <div class="faq-item no-border">
+
+          <div class="cstm-post-title">
+            <div class="post_section">
+              
+                <h3 class="pad-tp_btm_post">Share with your friends</h3>
+              
+              <div class="posts_social-icons cstm-width-80">
+                <div class="layout-item-2-1">
+                  <div class="layout-item cstm-no-grid">
+                    <img class="icon-cstm-width" src="{% static 'img/acaciax/facebook_icon.png' %}">
+                    <img class="icon-cstm-width" src="{% static 'img/acaciax/instagram_icon.png' %}">
+                    <img class="icon-cstm-width" src="{% static 'img/acaciax/twitter_icon.png' %}">
+                  </div>
+
+                  <div class="layout-item">
+                    
+                  </div>
+                </div>
+              </div>
+          </div>
+        </div>
+      </div>
+      <!--  POST ITEM SHARE-->
+      <div class="activity-items">
+
+                      <!-- ACTIVITY ITEM -->
+                      <div class="activity-item">
+                        <!-- USER AVATAR -->
+                        <img class="user-avatar" src="{% static 'img/users/05' %}.jpg" alt="user-05">
+                        <!-- /USER AVATAR -->
+
+                        <!-- ACTIVITY ITEM DROPDOWN BUTTON -->
+                        <div class="activity-item-dropdown-button">
+                          <!-- ARROW ICON -->
+                          <svg class="arrow-icon medium">
+                            <use xlink:href="#svg-arrow-medium"></use>
+                          </svg>
+                          <!-- /ARROW ICON -->
+                        </div>
+                        <!-- /ACTIVITY ITEM DROPDOWN BUTTON -->
+
+                        <!-- ACTIVITY ITEM ROW -->
+                        <div class="activity-item-row">
+                          <!-- ACTIVITY ITEM TITLE -->
+                          <a href="topic.html" class="activity-item-title secondary-color">Chubby Monkey</a>
+                          <!-- /ACTIVITY ITEM TITLE -->
+
+                          <!-- ACTIVITY ITEM TIMESTAMP -->
+                          <p class="activity-item-timestamp">2 hours ago</p>
+                          <!-- /ACTIVITY ITEM TIMESTAMP -->
+                        </div>
+                        <!-- /ACTIVITY ITEM ROW -->
+
+                        <!-- ACTIVITY ITEM TEXT -->
+                        <p class="activity-item-text base-color">I went for a hard buy in apple stocks and managed to get good returns, my predictons were right the market was going to be bearish.I went for a hard buy in apple stocks and managed to get good returns, my predictons were right the market was going to be bearish.I went for a hard buy in apple stocks and managed to get good returns, my predictons were right the market was going to be bearish....</p>
+                        <!-- /ACTIVITY ITEM TEXT -->
+                      </div>
+                      <!-- /ACTIVITY ITEM -->
+
+                      <!-- ACTIVITY ITEM -->
+                      <div class="activity-item">
+                        <!-- USER AVATAR -->
+                        <img class="user-avatar" src="{% static 'img/users/05' %}.jpg" alt="user-05">
+                        <!-- /USER AVATAR -->
+
+                        <!-- ACTIVITY ITEM DROPDOWN BUTTON -->
+                        <div class="activity-item-dropdown-button">
+                          <!-- ARROW ICON -->
+                          <svg class="arrow-icon medium">
+                            <use xlink:href="#svg-arrow-medium"></use>
+                          </svg>
+                          <!-- /ARROW ICON -->
+                        </div>
+                        <!-- /ACTIVITY ITEM DROPDOWN BUTTON -->
+
+                        <!-- ACTIVITY ITEM ROW -->
+                        <div class="activity-item-row">
+                          <!-- ACTIVITY ITEM TITLE -->
+                          <a href="topic.html" class="activity-item-title secondary-color">Chubby Monkey</a>
+                          <!-- /ACTIVITY ITEM TITLE -->
+
+                          <!-- ACTIVITY ITEM TIMESTAMP -->
+                          <p class="activity-item-timestamp">2 hours ago</p>
+                          <!-- /ACTIVITY ITEM TIMESTAMP -->
+                        </div>
+                        <!-- /ACTIVITY ITEM ROW -->
+
+                        <!-- ACTIVITY ITEM TEXT -->
+                        <p class="activity-item-text base-color">I went for a hard buy in apple stocks and managed to get good returns, my predictons were right the market was going to be bearish.I went for a hard buy in apple stocks and managed to get good returns, my predictons were right the market was going to be bearish....</p>
+                        <!-- /ACTIVITY ITEM TEXT -->
+                      </div>
+                      <!-- /ACTIVITY ITEM -->
+
+                      <!-- ACTIVITY ITEM -->
+                      <div class="activity-item">
+                        <!-- USER AVATAR -->
+                        <img class="user-avatar" src="{% static 'img/users/05' %}.jpg" alt="user-05">
+                        <!-- /USER AVATAR -->
+
+                        <!-- ACTIVITY ITEM DROPDOWN BUTTON -->
+                        <div class="activity-item-dropdown-button">
+                          <!-- ARROW ICON -->
+                          <svg class="arrow-icon medium">
+                            <use xlink:href="#svg-arrow-medium"></use>
+                          </svg>
+                          <!-- /ARROW ICON -->
+                        </div>
+                        <!-- /ACTIVITY ITEM DROPDOWN BUTTON -->
+
+                        <!-- ACTIVITY ITEM ROW -->
+                        <div class="activity-item-row">
+                          <!-- ACTIVITY ITEM TITLE -->
+                          <a href="topic.html" class="activity-item-title secondary-color">Chubby Monkey</a>
+                          <!-- /ACTIVITY ITEM TITLE -->
+
+                          <!-- ACTIVITY ITEM TIMESTAMP -->
+                          <p class="activity-item-timestamp">2 hours ago</p>
+                          <!-- /ACTIVITY ITEM TIMESTAMP -->
+                        </div>
+                        <!-- /ACTIVITY ITEM ROW -->
+
+                        <!-- ACTIVITY ITEM TEXT -->
+                        <p class="activity-item-text base-color">I went for a hard buy in apple stocks and managed to get good returns, my predictons were right the market was going to be bearish.I went for a hard buy in apple stocks and managed to get good returns, my predictons were right the market was going to be bearish....</p>
+                        <!-- /ACTIVITY ITEM TEXT -->
+                      </div>
+                      <!-- /ACTIVITY ITEM -->
+                    </div>
+
+    </div>
+    <!-- /FAQ ITEMS -->
+  </div>
+  <!-- /LAYOUT CONTENT FULL -->
+
+<div class="layout-content-full grid-limit grid3-1col centered">
+  <div class="layout-item-2-1 mgn_top_10pc">
+          <div class="layout-item">
+              <!-- SECTION TITLE WRAP -->
+            <div class="section-title-wrap light-gray">
+              <h2 class="">ANALYSIS AND OPINION</h2>
+              <div class="section-title-separator"></div>
+            </div>
+            <!-- /SECTION TITLE WRAP -->
+          </div>
+
+          <div class="layout-item">
+            <!-- BUTTON -->
+              <button class="button light-gray cstm_fit_content mgn_left-40">
+                MORE ANALYSIS
+                <!-- BUTTON ORNAMENT -->
+                <span class="button-ornament">
+                  <!-- ARROW ICON -->
+                  <svg class="arrow-icon medium">
+                    <use xlink:href="#svg-arrow-medium"></use>
+                  </svg>
+                  <!-- /ARROW ICON -->
+
+                  <!-- CROSS ICON -->
+                  <svg class="cross-icon small">
+                    <use xlink:href="#svg-cross-small"></use>
+                  </svg>
+                  <!-- /CROSS ICON -->
+                </span>
+                <!-- /BUTTON ORNAMENT -->
+              </button>
+              <!-- /BUTTON -->
+          </div>
+        </div>
+        <!-- LAYOUT ITEM 1-1-1 -->
+      <div class="layout-item-1-1-1">
+        <!-- LAYOUT ITEM -->
+        <div class="layout-item">
+
+          <!-- POST PREVIEW -->
+          <div class="post-preview gaming-news img-toggle">
+            <!-- POST PREVIEW IMG WRAP -->
+            <a href="post-v1.html">
+              <div class="post-preview-img-wrap">
+                <!-- POST PREVIEW IMG -->
+                <figure class="post-preview-img liquid">
+                  <img src="img/posts/17.jpg" alt="post-17">
+                </figure>
+                <!-- /POST PREVIEW IMG -->
+              </div>
+            </a>
+            <!-- /POST PREVIEW IMG WRAP -->
+
+            <!-- TAG ORNAMENT -->
+            <a href="news-v1.html" class="tag-ornament">COMMODITIES WEEKLY</a>
+            <!-- /TAG ORNAMENT -->
+
+            <!-- POST PREVIEW TITLE -->
+            <a href="post-v1.html" class="post-preview-title">SOYBEANS AT A 16-MONTH HIGH</a>
+            <!-- POST AUTHOR INFO -->
+            <div class="post-author-info-wrap">
+              <p class="post-author-info small light">By <a href="search-results.html" class="post-author">Vellatrix</a><span class="separator">|</span>December 15th, 2018</p>
+            </div>
+            <!-- /POST AUTHOR INFO -->
+            <!-- POST PREVIEW TEXT -->
+            <p class="post-preview-text">Lorem ipsum dolor sit amet, consectetur bere adipisicing elit, sed do eiusmod tempor lorem incididunt ut labore et dolore magna.</p>
+          </div>
+          <!-- /POST PREVIEW -->
+          
+        </div>
+        <!-- /LAYOUT ITEM -->
+
+        <!-- LAYOUT ITEM -->
+        <div class="layout-item">
+          <!-- POST PREVIEW -->
+          <div class="post-preview gaming-news img-toggle">
+            <!-- POST PREVIEW IMG WRAP -->
+            <a href="post-v1.html">
+              <div class="post-preview-img-wrap">
+                <!-- POST PREVIEW IMG -->
+                <figure class="post-preview-img liquid">
+                  <img src="img/posts/17.jpg" alt="post-17">
+                </figure>
+                <!-- /POST PREVIEW IMG -->
+              </div>
+            </a>
+            <!-- /POST PREVIEW IMG WRAP -->
+
+            <!-- TAG ORNAMENT -->
+            <a href="news-v1.html" class="tag-ornament">COMMODITIES WEEKLY</a>
+            <!-- /TAG ORNAMENT -->
+
+            <!-- POST PREVIEW TITLE -->
+            <a href="post-v1.html" class="post-preview-title">SOYBEANS AT A 16-MONTH HIGH</a>
+            <!-- POST AUTHOR INFO -->
+            <div class="post-author-info-wrap">
+              <p class="post-author-info small light">By <a href="search-results.html" class="post-author">Vellatrix</a><span class="separator">|</span>December 15th, 2018</p>
+            </div>
+            <!-- /POST AUTHOR INFO -->
+            <!-- POST PREVIEW TEXT -->
+            <p class="post-preview-text">Lorem ipsum dolor sit amet, consectetur bere adipisicing elit, sed do eiusmod tempor lorem incididunt ut labore et dolore magna.</p>
+          </div>
+          <!-- /POST PREVIEW -->
+        </div>
+
+        <!-- /LAYOUT ITEM -->
+        <div class="layout-item">
+          <!-- POST PREVIEW -->
+          <div class="post-preview gaming-news img-toggle">
+            <!-- POST PREVIEW IMG WRAP -->
+            <a href="post-v1.html">
+              <div class="post-preview-img-wrap">
+                <!-- POST PREVIEW IMG -->
+                <figure class="post-preview-img liquid">
+                  <img src="img/posts/17.jpg" alt="post-17">
+                </figure>
+                <!-- /POST PREVIEW IMG -->
+              </div>
+            </a>
+            <!-- /POST PREVIEW IMG WRAP -->
+
+            <!-- TAG ORNAMENT -->
+            <a href="news-v1.html" class="tag-ornament">COMMODITIES WEEKLY</a>
+            <!-- /TAG ORNAMENT -->
+
+            <!-- POST PREVIEW TITLE -->
+            <a href="post-v1.html" class="post-preview-title">SOYBEANS AT A 16-MONTH HIGH</a>
+            <!-- POST AUTHOR INFO -->
+            <div class="post-author-info-wrap">
+              <p class="post-author-info small light">By <a href="search-results.html" class="post-author">Vellatrix</a><span class="separator">|</span>December 15th, 2018</p>
+            </div>
+            <!-- /POST AUTHOR INFO -->
+            <!-- POST PREVIEW TEXT -->
+            <p class="post-preview-text">Lorem ipsum dolor sit amet, consectetur bere adipisicing elit, sed do eiusmod tempor lorem incididunt ut labore et dolore magna.</p>
+          </div>
+          <!-- /POST PREVIEW -->
+        </div>
+      </div>
+      <!-- /LAYOUT ITEM 1-1-1 -->
+      </div>
+
+{% endblock content_topic_posts %}

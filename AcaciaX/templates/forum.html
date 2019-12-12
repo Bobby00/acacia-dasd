@@ -1,0 +1,346 @@
+{% extends 'base.html' %}
+
+{% load static %}
+
+{% block title %}Acaciax | Forum{% endblock %}
+
+{% block content_forum %}
+  <!-- BANNER WRAP -->
+  <div class="banner-wrap game-review">
+    <!-- BANNER -->
+    <div class="banner grid-limit cstm-width-60">
+      <h2 class="banner-title text-left">ACACIAX FORUMs</h2>
+      <p class="banner-sections text-left">
+        <a href="{% url 'home' %}">
+          <span class="clr-whte banner-section">Home</span>
+        </a>
+        <!-- ARROW ICON -->
+        <svg class="arrow-icon">
+          <use xlink:href="#svg-arrow"></use>
+        </svg>
+        <!-- /ARROW ICON -->
+        <span class="banner-section"><strong>Forum</strong></span>
+      </p>
+    </div>
+    <!-- /BANNER -->
+  </div>
+  <!-- /BANNER WRAP -->
+
+
+  <!-- LAYOUT CONTENT FULL -->
+  <div class="layout-content-1 grid-limit cstm-width-70">
+    <!-- FILTERS ROW -->
+    <div class="filters-row">
+      <!-- DROPDOWN SIMPLE WRAP -->
+      <div class="dropdown-simple-wrap">
+        <!-- DP CURRENT OPTION -->
+        <div id="filter-01-dropdown-trigger" class="dp-current-option">
+          <!-- DP CURRENT OPTION VALUE -->
+          <div id="filter-01-dropdown-option-value" class="dp-current-option-value">
+            <p class="dp-option-text">All Categories</p>
+          </div>
+          <!-- /DP CURRENT OPTION VALUE -->
+
+          <!-- ARROW ICON -->
+          <svg class="arrow-icon">
+            <use xlink:href="#svg-arrow"></use>
+          </svg>
+          <!-- /ARROW ICON -->
+        </div>
+        <!-- /DP CURRENT OPTION -->
+
+        <!-- DP OPTIONS -->
+        <div id="filter-01-dropdown" class="dp-options small">
+          <!-- DP OPTION -->
+          <div class="dp-option">
+            <p class="dp-option-text">All Categories</p>
+          </div>
+          <!-- /DP OPTION -->
+
+          <!-- DP OPTION -->
+          <div class="dp-option">
+            <p class="dp-option-text">Pixel Community</p>
+          </div>
+          <!-- /DP OPTION -->
+
+          <!-- DP OPTION -->
+          <div class="dp-option">
+            <p class="dp-option-text">The Arcade</p>
+          </div>
+          <!-- /DP OPTION -->
+        </div>
+        <!-- /DP OPTIONS -->
+      </div>
+      <!-- /DROPDOWN SIMPLE WRAP -->
+
+
+      <!-- OPTION LIST -->
+      <div class="option-list">
+        <!-- OPTION LIST ITEM -->
+        <p class="option-list-item fnt-14">Latest Topics</p>
+        <!-- /OPTION LIST ITEM -->
+
+        <!-- OPTION LIST ITEM -->
+        <p class="option-list-item fnt-14">MORE</p>
+        <!-- /OPTION LIST ITEM -->
+      </div>
+      <!-- /OPTION LIST -->
+
+      <!-- FORUM ACTIONS -->
+      <div class="forum-actions">
+        <!-- DROPDOWN SIMPLE WRAP -->
+        <div class="dropdown-simple-wrap">
+          <!-- CURRENT OPTION -->
+          <div id="forums-search-dropdown-trigger" class="current-option">
+            <!-- BUTTON -->
+            <p class="button small red">Search Forums</p>
+            <!-- /BUTTON -->
+          </div>
+          <!-- /CURRENT OPTION -->
+  
+          <!-- DP OPTIONS -->
+          <div id="forums-search-dropdown" class="dp-options medium">
+            <!-- FORM WRAP -->
+            <form class="form-wrap">
+              <!-- FORM ROW -->
+              <div class="form-row">
+                <!-- FORM ITEM -->
+                <div class="form-item">
+                  <!-- SUBMIT INPUT -->
+                  <div class="submit-input red">
+                    <input type="text" id="forum_search_input" name="forum_search_input" placeholder="What are you looking for?...">
+                    <button class="submit-input-button">
+                      <!-- ARROW ICON -->
+                      <svg class="arrow-icon medium">
+                        <use xlink:href="#svg-arrow-medium"></use>
+                      </svg>
+                      <!-- /ARROW ICON -->
+                    </button>
+                  </div>
+                  <!-- /SUBMIT INPUT -->
+                </div>
+                <!-- /FORM ITEM -->
+              </div>
+              <!-- /FORM ROW -->
+
+              <!-- FORM CONFIRM ROW -->
+              <div class="form-confirm-row">
+                <!-- CHECKBOX ITEM -->
+                <div class="checkbox-item">
+                  <input type="checkbox" id="f_search_cat_only" name="f_search_cat_only" value="only" checked>
+                  <!-- CHECKBOX BOX -->
+                  <div class="checkbox-box blue">
+                    <!-- CROSS ICON -->
+                    <svg class="cross-cb-icon small">
+                      <use xlink:href="#svg-cross-cb-small"></use>
+                    </svg>
+                    <!-- /CROSS ICON -->
+                  </div>
+                  <!-- CHECKBOX BOX -->
+                  <label for="f_search_cat_only" class="rl-label">Search this category only</label>
+                </div>
+                <!-- /CHECKBOX ITEM -->
+
+                <!-- DECORATED LINK -->
+                <p class="decorated-link red popup-advanced-search-trigger">Advanced Search</p>
+                <!-- /DECORATED LINK -->
+              </div>
+              <!-- /FORM CONFIRM ROW -->
+            </form>
+            <!-- FORM WRAP -->
+          </div>
+          <!-- /DP OPTIONS -->
+        </div>
+        <!-- /DROPDOWN SIMPLE WRAP -->
+
+        <!-- BUTTON -->
+        <p class="button small blue popup-create-topic-trigger">Create Topic</p>
+        <!-- /BUTTON -->
+
+        <!-- DROPDOWN SIMPLE WRAP -->
+        <div class="dropdown-simple-wrap">
+          <!-- CURRENT OPTION -->
+          <div id="forums-user-dropdown-trigger" class="current-option">
+            <!-- USER AVATAR WRAP -->
+            <figure class="user-avatar-wrap">
+              <!-- USER AVATAR -->
+              <img class="user-avatar smaller" src="{% static 'img/users/05.jpg' %}" alt="user-05">
+              <!-- /USER AVATAR -->
+
+              <!-- USER AVATAR DECORATION -->
+              <div class="user-avatar-decoration">
+                <!-- USER AVATAR DECORATION TEXT -->
+                <p class="user-avatar-decoration-text">2</p>
+                <!-- /USER AVATAR DECORATION TEXT -->
+              </div>
+              <!-- /USER AVATAR DECORATION -->
+            </figure>
+            <!-- /USER AVATAR WRAP -->
+          </div>
+          <!-- /CURRENT OPTION -->
+  
+          <!-- DP OPTIONS -->
+          <div id="forums-user-dropdown" class="dp-options medium no-padding-bottom">
+            <!-- USER DROPDOWN -->
+            <div class="user-dropdown">
+              <!-- USER DROPDOWN HEADER -->
+              <div class="user-dropdown-header">
+                <!-- USER DROPDOWN HEADER TEXT -->
+                <a href="profile-summary.html" class="user-dropdown-header-text">James_Spiegel</a>
+                <!-- /USER DROPDOWN HEADER TEXT -->
+
+                <!-- USER DROPDOWN HEADER ACTIONS -->
+                <div class="user-dropdown-header-actions">
+                  <!-- USER DROPDOWN HEADER ACTION -->
+                  <a href="profile-messages.html" class="user-dropdown-header-action">
+                    <i class="icon-envelope"></i>
+                  </a>
+                  <!-- /USER DROPDOWN HEADER ACTION -->
+
+                  <!-- USER DROPDOWN HEADER ACTION -->
+                  <a href="profile-settings.html" class="user-dropdown-header-action">
+                    <i class="icon-settings"></i>
+                  </a>
+                  <!-- /USER DROPDOWN HEADER ACTION -->
+                </div>
+                <!-- /USER DROPDOWN HEADER ACTIONS -->
+              </div>
+              <!-- /USER DROPDOWN HEADER -->
+
+              <!-- USER DROPDOWN BODY -->
+              <div class="user-dropdown-body">
+                <!-- NOTIFICATION ITEM -->
+                <div class="notification-item">
+                  <!-- NOTIFICATION ITEM ICON -->
+                  <i class="notification-item-icon icon-action-undo"></i>
+                  <!-- /NOTIFICATION ITEM ICON -->
+
+                  <!-- NOTIFICATION ITEM TEXT -->
+                  <a href="topic.html" class="notification-item-text">3 Replies <span class="highlight">The American league movie is around the corner! Here's the last trailer</span></a>
+                  <!-- /NOTIFICATION ITEM TEXT -->
+                </div>
+                <!-- /NOTIFICATION ITEM -->
+
+                <!-- NOTIFICATION ITEM -->
+                <div class="notification-item">
+                  <!-- NOTIFICATION ITEM ICON -->
+                  <p class="notification-item-icon">@</p>
+                  <!-- /NOTIFICATION ITEM ICON -->
+
+                  <!-- NOTIFICATION ITEM TEXT -->
+                  <a href="topic.html" class="notification-item-text">Beardman-Returns <span class="highlight">Power studios announced three "Game of Dragons" universe pilots</span></a>
+                  <!-- /NOTIFICATION ITEM TEXT -->
+                </div>
+                <!-- /NOTIFICATION ITEM -->
+
+                <!-- NOTIFICATION ITEM -->
+                <div class="notification-item">
+                  <!-- NOTIFICATION ITEM ICON -->
+                  <i class="notification-item-icon icon-action-undo read"></i>
+                  <!-- /NOTIFICATION ITEM ICON -->
+
+                  <!-- NOTIFICATION ITEM TEXT -->
+                  <a href="topic.html" class="notification-item-text">1 Reply <span class="highlight">Post your best GTE V online character photos and vote for the best</span></a>
+                  <!-- /NOTIFICATION ITEM TEXT -->
+                </div>
+                <!-- /NOTIFICATION ITEM -->
+
+                <!-- NOTIFICATION ITEM -->
+                <div class="notification-item">
+                  <!-- NOTIFICATION ITEM ICON -->
+                  <i class="notification-item-icon icon-envelope"></i>
+                  <!-- /NOTIFICATION ITEM ICON -->
+
+                  <!-- NOTIFICATION ITEM TEXT -->
+                  <a href="topic.html" class="notification-item-text">Dexter Danvers <span class="highlight">Inquiry about the forum rules</span></a>
+                  <!-- /NOTIFICATION ITEM TEXT -->
+                </div>
+                <!-- /NOTIFICATION ITEM -->
+
+                <!-- NOTIFICATION ITEM -->
+                <div class="notification-item">
+                  <!-- NOTIFICATION ITEM ICON -->
+                  <i class="notification-item-icon icon-like"></i>
+                  <!-- /NOTIFICATION ITEM ICON -->
+
+                  <!-- NOTIFICATION ITEM TEXT -->
+                  <a href="topic.html" class="notification-item-text">Thunder-Gamer <span class="highlight">The american league movie is around the corner! Here's the last trailer</span></a>
+                  <!-- /NOTIFICATION ITEM TEXT -->
+                </div>
+                <!-- /NOTIFICATION ITEM -->
+
+                <!-- NOTIFICATION ITEM -->
+                <div class="notification-item">
+                  <!-- NOTIFICATION ITEM ICON -->
+                  <i class="notification-item-icon icon-action-undo read"></i>
+                  <!-- /NOTIFICATION ITEM ICON -->
+
+                  <!-- NOTIFICATION ITEM TEXT -->
+                  <a href="topic.html" class="notification-item-text">5 Replies <span class="highlight">Introduce yourself and show us your cosplays!</span></a>
+                  <!-- /NOTIFICATION ITEM TEXT -->
+                </div>
+                <!-- /NOTIFICATION ITEM -->
+              </div>
+              <!-- /USER DROPDOWN BODY -->
+
+              <!-- MORE ITEMS LOADER -->
+              <a href="profile-notifications.html" class="more-items-loader">
+                <div class="square"></div>
+                <div class="square"></div>
+                <div class="square"></div>
+              </a>
+              <!-- /MORE ITEMS LOADER -->
+            </div>
+            <!-- /USER DROPDOWN -->
+          </div>
+          <!-- /DP OPTIONS -->
+        </div>
+        <!-- /DROPDOWN SIMPLE WRAP -->
+      </div>
+      <!-- /FORUM ACTIONS -->
+    </div>
+    <!-- /FILTERS ROW -->
+
+        <!-- TABLE -->
+
+        <div class="table-responsive-vertical grid3-1col">
+          <!-- Table starts here -->
+          <table id="table" class="table forum-table-topics no-brdr-space table-hover table-mc-light-blue">
+              <thead>
+                <tr class="capitalize">
+                  <th class="forum-header-title">Category</th>
+                  <th class="forum-header-title">Topics</th>
+                  <th class="forum-header-title">Post</th>
+                  <th class="forum-header-title">Latest</th>
+                </tr>
+              </thead>
+              
+              <tbody>
+
+                {% for category in categories %}
+                <tr>
+                  <td class="category-title" data-title="Catergory">
+                    <h3 class="pd-btm-12"><a href="{% url 'category_topics' category.pk %}">{{ category.name }}</a></h3>
+                    <p class="cstm-width-a">{{ category.description }}</p>
+                  </td>
+                  <td class="topics-count fnt-w8-800" data-title="Topics"> 24</td>
+                  <td class="forum-posts-count fnt-w8-800" data-title="Posts">
+                    200
+                  </td>
+                  <td class="forum-latest fnt-w8-600 clr_black" data-title="Actual">
+                    <p>ON THE TOPICS IN THIS CATEGORY <span> 3h</span></p>
+                    <p>ON THE TOPICS IN THIS CATEGORY <span> 3h</span></p>
+                    <p>ON THE TOPICS IN THIS CATEGORY <span> 3h</span></p>
+                  </td>
+                  
+                </tr>
+                {% endfor %}
+
+              </tbody>
+            </table>
+          </div>
+    <!-- /TABLE -->
+  </div>
+  <!-- LAYOUT CONTENT FULL -->
+
+{% endblock content_forum %}

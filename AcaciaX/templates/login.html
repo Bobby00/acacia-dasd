@@ -1,0 +1,69 @@
+{% extends 'base.html' %}
+
+{% load static %}
+
+{% block title %}Acaciax | Log in{% endblock %}
+
+{% block content_login %}
+  <!-- BANNER WRAP -->
+  <div class="banner-wrap forum-banner">
+    <!-- BANNER -->
+    <div class="banner grid-limit">
+      <h2 class="banner-title">Log in</h2>
+      <p class="banner-sections">
+        <a class="clr-whte" href="{% url 'home' %}"><span class="banner-section">Home</span></a>
+        <!-- ARROW ICON -->
+        <svg class="arrow-icon">
+          <use xlink:href="#svg-arrow"></use>
+        </svg>
+        <!-- /ARROW ICON -->
+        <span class="banner-section">Log in</span>
+      </p>
+    </div>
+    <!-- /BANNER -->
+  </div>
+  <!-- /BANNER WRAP -->
+
+  <!-- LAYOUT CONTENT FULL -->
+  <div class="layout-content-full grid-limit">
+    <!-- GRID 2 1COL -->
+    <div class="grid2-1col centered">
+      <!-- TAB WRAP -->
+      <div class="tab-wrap">
+        <!-- TAB BODY -->
+        <div class="tab-body">
+          
+          <!-- TAB ITEM -->
+          <div class="tab-item">
+            <!-- FORM BOX -->
+            <div class="form-box">
+              <!-- SECTION TITLE WRAP -->
+              <div class="section-title-wrap blue">
+                <h2 class="section-title medium">Log in</h2>
+                <div class="section-title-separator"></div>
+              </div>
+              <!-- /SECTION TITLE WRAP -->
+
+              <!-- FORM WRAP -->
+              <form class="form-wrap" method="post" novalidate>
+                {% csrf_token %}
+                <input type="hidden" name="next" value="{{ next }}">
+                {% include 'includes/form.html' %}
+                <button type="submit" class="button blue full">Login Now!</button>
+              </form>
+              <p style="padding-top: 10px;">Don't have an account?<a href="{% url 'signup' %}"> Create account</a></p>
+              <p style="padding-top: 10px;" class="text-center text-muted"><a href="#"><i>Forgot your password?</i></a></p>
+              <!-- /FORM WRAP -->
+            </div>
+            <!-- /FORM BOX -->
+          </div>
+          <!-- /TAB ITEM -->
+        </div>
+        <!-- /TAB BODY -->
+      </div>
+      <!-- /TAB WRAP -->
+    </div>
+    <!-- /GRID 2 1COL -->
+  </div>
+  <!-- LAYOUT CONTENT FULL -->
+  {% endblock content_login %}
