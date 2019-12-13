@@ -26,7 +26,7 @@ class NewTopicForm(forms.ModelForm):
 		fields = ['subject', 'message']
 		labels = {
 			'subject': 'Topic title'
-		}
+	}
 
 class PostForm(forms.ModelForm):
     class Meta:

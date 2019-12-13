@@ -2,6 +2,8 @@
 
 {% load static %}
 
+{% load humanize %}
+
 {% block title %}Acaciax | Reply to post{% endblock %}
 
 {% block content_reply_post %}
@@ -57,7 +59,7 @@
             <div class="form-box">
               <!-- SECTION TITLE WRAP -->
               <div class="section-title-wrap blue">
-                <h2 class="section-title medium">Reply to  post </u></span></h2>
+                <h2 class="section-title medium">Reply to  post</h2>
                 <div class="section-title-separator"></div>
               </div>
               <!-- /SECTION TITLE WRAP -->
@@ -79,6 +81,43 @@
         <!-- /TAB BODY -->
       </div>
       <!-- /TAB WRAP -->
+      <div class="activity-items">
+        {% for post in topic.posts.all %}
+        <!-- ACTIVITY ITEM -->
+        <div class="activity-item">
+          <!-- USER AVATAR -->
+          <img class="user-avatar" src="{% static 'img/users/05.jpg' %}" alt="user-05">
+          <!-- /USER AVATAR -->
+
+          <!-- ACTIVITY ITEM DROPDOWN BUTTON -->
+          <div class="activity-item-dropdown-button">
+            <!-- ARROW ICON -->
+            <svg class="arrow-icon medium">
+              <use xlink:href="#svg-arrow-medium"></use>
+            </svg>
+            <!-- /ARROW ICON -->
+          </div>
+          <!-- /ACTIVITY ITEM DROPDOWN BUTTON -->
+
+          <!-- ACTIVITY ITEM ROW -->
+          <div class="activity-item-row">
+            <!-- ACTIVITY ITEM TITLE -->
+            <a href="topic.html" class="activity-item-title secondary-color">{{ post.created_by.username }}</a>
+            <!-- /ACTIVITY ITEM TITLE -->
+
+            <!-- ACTIVITY ITEM TIMESTAMP -->
+            <p class="activity-item-timestamp">{{ post.created_at|naturaltime }}</p>
+            <!-- /ACTIVITY ITEM TIMESTAMP -->
+          </div>
+          <!-- /ACTIVITY ITEM ROW -->
+
+          <!-- ACTIVITY ITEM TEXT -->
+          <p class="activity-item-text base-color">{{ post.message }}</p>
+          <!-- /ACTIVITY ITEM TEXT -->
+        </div>
+        <!-- /ACTIVITY ITEM -->
+        {% endfor %}
+      </div>
     </div>
     <!-- /GRID 2 1COL -->
   </div>

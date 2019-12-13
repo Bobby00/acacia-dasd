@@ -323,10 +323,8 @@
                     <h3 class="pd-btm-12"><a href="{% url 'category_topics' category.pk %}">{{ category.name }}</a></h3>
                     <p class="cstm-width-a">{{ category.description }}</p>
                   </td>
-                  <td class="topics-count fnt-w8-800" data-title="Topics"> 24</td>
-                  <td class="forum-posts-count fnt-w8-800" data-title="Posts">
-                    200
-                  </td>
+                  <td class="topics-count fnt-w8-800" data-title="Topics"> {{ category.topics.count }} </td>
+                  <td class="forum-posts-count fnt-w8-800" data-title="Posts">{{ category.get_posts_count }} </td>
                   <td class="forum-latest fnt-w8-600 clr_black" data-title="Actual">
                     <p>ON THE TOPICS IN THIS CATEGORY <span> 3h</span></p>
                     <p>ON THE TOPICS IN THIS CATEGORY <span> 3h</span></p>

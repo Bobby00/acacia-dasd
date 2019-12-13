@@ -330,7 +330,7 @@
 
               <tbody>
 
-                {% for topic in category.topics.all %}
+                {% for topic in topics %}
                   <tr>
                     <td class="category-title" data-title="Catergory">
                       <a href="{% url 'topic_posts' category.pk topic.pk %}"><p class="cstm-width-a">{{ topic.subject }}</p></a>
@@ -339,10 +339,10 @@
                       
                     </td>
                     <td class="forum-posts-count fnt-w8-800 text-center" data-title="Posts">
-                      24
+                      {{ topic.replies }}
                     </td>
                     <td class="forum-latest fnt-w8-600 clr_black text-center" data-title="Actual">
-                      200
+                      {{ topic.views }}
                     </td>
                     <td class="forum-latest clr_black text-center" data-title="Actual">
                       {{ topic.last_updated|naturaltime }}

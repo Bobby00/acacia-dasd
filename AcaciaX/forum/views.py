@@ -1,5 +1,6 @@
 from django.contrib.auth.models import User
 from django.contrib.auth.decorators import login_required
+from django.db.models import Count
 
 from .forms import NewTopicForm, PostForm
 from django.shortcuts import render, get_object_or_404, redirect
@@ -13,14 +14,14 @@ def forum(request):
     return render(request, 'forum.html', {'categories': categories})
 
 def category_topics(request, pk):
-	try:
-		category = get_object_or_404(Category, pk=pk)
-	except Category.DoesNotExist:
-		raise Http404
-	return render(request, 'forum-topics.html', {'category': category})
+    category = get_object_or_404(Category, pk=pk)
+    topics = category.topics.order_by('-last_updated').annotate(replies=Count('posts') - 1)
+    return render(request, 'forum-topics.html', {'category': category, 'topics': topics})
 
 def topic_posts(request, pk, topic_pk):
     topic = get_object_or_404(Topic, category__pk=pk, pk=topic_pk)
+    topic.views += 1
+    topic.save()
     return render(request, 'topic_posts.html', {'topic': topic})
 
 @login_required
